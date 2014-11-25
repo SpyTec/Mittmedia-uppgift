@@ -1,0 +1,6 @@
+$bg_color: #DDD;
+$main_color: lighten($bg_color,40);
+$fancy_color: dodgerblue;
+
+$text_heading_color: complement(invert($main_color)) + #222;
+$text_color: darken($text_heading_color,10);

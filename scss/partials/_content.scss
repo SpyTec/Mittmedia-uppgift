@@ -1,0 +1,42 @@
+.mainContent{
+	width:$main_width;
+	min-width: $main_min_width + ($main_padding * 2);
+	margin: 0 auto;
+	background-color: $main_color;
+	border-radius: 5px;
+	border:1px solid darken($bg_color,10);
+	@include box-shadow(0, 2px, 7px, 0, rgba(0,0,0,0.15));
+}
+header{
+	padding:$main_padding 0 0 0;
+	@include bg-gradient(lighten($fancy_color,5), 0%, darken($fancy_color,5), 100%);
+	h1{
+		color:white;
+		text-align: center;
+	}
+}
+h1{
+	font-size: 28pt;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0 auto;
+	margin-bottom: 10px;
+	display: inline-block;
+	color:$text_heading_color;
+}
+form{
+	display: block;
+	margin: 0 auto;
+	label{
+	}
+	input{
+		float:right;
+	}
+	input[type="submit"]{
+		float:none;
+		width:100%;
+	}
+	p{
+		position: relative;
+	}
+}

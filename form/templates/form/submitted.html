@@ -1,0 +1,38 @@
+{% extends "form/base.html" %}
+{% block main_content %}
+<header class="headerPadding">
+	<h1 class="center">Kvitto på intresseanmälan</h1>
+</header>
+<div class="center mainPadding">
+	<div>
+		<h2>Namn</h2>
+		<p>{{form.fullname}}</p>
+	</div>
+	<div>
+		<h2>Email</h2>
+		<p>{{form.email}}</p>
+	</div>
+	<div>
+		<h2>Gatuadress</h2>
+		<p>{{form.address}}</p>
+	</div>
+	<div>
+		<h2>Postnummer</h2>
+		<p>{{form.zipcode}}</p>
+	</div>
+	<div>
+		<h2>Ort</h2>
+		<p>{{form.city}}</p>
+	</div>
+	<div>
+		<h2>Din favorit artist</h2>
+		<br>
+		<h4>Top 3 låtar för {{form.favorite_artist}}</h4>
+		<ol>
+			{% for toptrack in artists.toptracks.track|slice:":3" %}
+				<li>{{toptrack.name}}</li>
+			{% endfor %}
+		</ol>
+	</div>
+</div>
+{% endblock %}
